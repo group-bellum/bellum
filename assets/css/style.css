@@ -35677,3 +35677,427 @@ header.header-transparent.in-full-screen .action-area .menu-btn {
     display: none;
   }
 }
+
+.bellum-hero {
+  min-height: 820px;
+  height: auto;
+  padding: 100px 0 90px;
+  overflow: hidden;
+  background:
+    linear-gradient(115deg, #f7f8fb 0%, #ffffff 47%, #eaf2ff 100%);
+  position: relative;
+}
+
+.bellum-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(12, 18, 28, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 18, 28, 0.06) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.bellum-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -12% -34% -12%;
+  height: 46%;
+  background: linear-gradient(90deg, rgba(10, 132, 255, 0.2), rgba(38, 181, 125, 0.18), rgba(255, 184, 77, 0.16));
+  filter: blur(46px);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.bellum-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bellum-hero-grid {
+  min-height: 580px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  align-items: center;
+  gap: 54px;
+}
+
+.bellum-hero-copy {
+  max-width: 650px;
+}
+
+.bellum-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(18, 28, 45, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #243044;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  box-shadow: 0 16px 44px rgba(31, 45, 70, 0.08);
+}
+
+.bellum-hero-eyebrow span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22b176;
+  box-shadow: 0 0 0 6px rgba(34, 177, 118, 0.14);
+}
+
+.bellum-hero-title {
+  margin: 24px 0 22px;
+  color: #101623;
+  font-size: 62px;
+  line-height: 0.96;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.bellum-hero-lead {
+  max-width: 590px;
+  margin: 0;
+  color: #4a5567;
+  font-size: 19px;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.bellum-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.bellum-hero-btn {
+  width: auto;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 21px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bellum-hero-btn.primary {
+  background: #101623;
+  color: #fff;
+  border: 1px solid #101623;
+  box-shadow: 0 18px 36px rgba(16, 22, 35, 0.22);
+}
+
+.bellum-hero-btn.secondary {
+  background: rgba(255, 255, 255, 0.78);
+  color: #101623;
+  border: 1px solid rgba(16, 22, 35, 0.13);
+}
+
+.bellum-hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.bellum-hero-btn.primary:hover {
+  color: #fff;
+}
+
+.bellum-hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.bellum-hero-metrics div {
+  min-width: 0;
+  padding: 18px 16px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.bellum-hero-metrics strong,
+.bellum-hero-metrics span {
+  display: block;
+}
+
+.bellum-hero-metrics strong {
+  color: #101623;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.bellum-hero-metrics span {
+  margin-top: 8px;
+  color: #647084;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bellum-hero-visual {
+  min-height: 560px;
+  position: relative;
+}
+
+.bellum-hero-image {
+  position: absolute;
+  inset: 26px 0 0 38px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 34px 90px rgba(18, 28, 45, 0.2);
+}
+
+.bellum-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(16, 22, 35, 0.72), rgba(16, 22, 35, 0.08) 52%, rgba(10, 132, 255, 0.22)),
+    linear-gradient(to top, rgba(16, 22, 35, 0.52), transparent 58%);
+}
+
+.bellum-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bellum-hero-panel {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: min(390px, 66%);
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 8px;
+  background: rgba(16, 22, 35, 0.76);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 24px 70px rgba(10, 20, 36, 0.32);
+}
+
+.bellum-panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.bellum-panel-top i {
+  color: #67d39b;
+}
+
+.bellum-panel-bars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 10px;
+  height: 126px;
+  margin-top: 24px;
+}
+
+.bellum-panel-bars span {
+  display: block;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, #6eb6ff, #2dd38f);
+}
+
+.bellum-panel-bars span:nth-child(1) {
+  height: 42%;
+}
+
+.bellum-panel-bars span:nth-child(2) {
+  height: 68%;
+}
+
+.bellum-panel-bars span:nth-child(3) {
+  height: 54%;
+  background: linear-gradient(180deg, #ffd16f, #4ea6ff);
+}
+
+.bellum-panel-bars span:nth-child(4) {
+  height: 88%;
+}
+
+.bellum-panel-tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bellum-panel-tags span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bellum-hero-card {
+  position: absolute;
+  right: 18px;
+  bottom: 46px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #fff;
+  color: #152033;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 800;
+  box-shadow: 0 22px 60px rgba(18, 28, 45, 0.18);
+}
+
+.bellum-hero-card i {
+  flex: 0 0 auto;
+  color: #22b176;
+  font-size: 23px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .bellum-hero {
+    padding-top: 125px;
+  }
+
+  .bellum-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .bellum-hero-copy {
+    max-width: 760px;
+  }
+
+  .bellum-hero-title {
+    font-size: 68px;
+  }
+
+  .bellum-hero-visual {
+    min-height: 470px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bellum-hero {
+    min-height: auto;
+    padding: 24px 0 54px;
+  }
+
+  .bellum-hero-grid {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .bellum-hero-copy {
+    display: contents;
+  }
+
+  .bellum-hero-eyebrow {
+    order: 1;
+    width: fit-content;
+  }
+
+  .bellum-hero-title {
+    order: 2;
+    margin-top: 20px;
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .bellum-hero-lead {
+    order: 3;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .bellum-hero-actions {
+    order: 4;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .bellum-hero-btn {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .bellum-hero-metrics {
+    order: 6;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .bellum-hero-metrics div {
+    padding: 14px 15px;
+  }
+
+  .bellum-hero-visual {
+    order: 5;
+    min-height: 390px;
+  }
+
+  .bellum-hero-image {
+    inset: 0;
+  }
+
+  .bellum-hero-panel {
+    left: 14px;
+    top: 22px;
+    width: calc(100% - 28px);
+    padding: 18px;
+  }
+
+  .bellum-panel-bars {
+    height: 92px;
+  }
+
+  .bellum-hero-card {
+    right: 14px;
+    bottom: 14px;
+    width: calc(100% - 28px);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .bellum-hero-title {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .bellum-hero-eyebrow {
+    max-width: 100%;
+    font-size: 12px;
+  }
+
+  .bellum-hero-visual {
+    min-height: 360px;
+  }
+}
