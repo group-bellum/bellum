@@ -36352,7 +36352,7 @@ body.index-one .rts-sidebar-menu-desktop {
 
 body.index-one .bellum-menu-head {
   padding-right: 58px;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 body.index-one .bellum-menu-logo {
@@ -36487,5 +36487,1140 @@ body.index-one .rts-sidebar-menu-desktop .get-in-touch .wrapper .single a {
   body.index-one .bellum-menu-nav a {
     min-height: 54px;
     font-size: 16px;
+  }
+}
+
+.bellum-about {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+  background: #fff;
+}
+
+.bellum-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(16, 22, 35, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(16, 22, 35, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, transparent 100%);
+  pointer-events: none;
+}
+
+.bellum-about::after {
+  content: "";
+  position: absolute;
+  right: -18%;
+  top: 18%;
+  width: 48%;
+  height: 42%;
+  background: linear-gradient(90deg, rgba(34, 177, 118, 0.14), rgba(10, 132, 255, 0.16));
+  filter: blur(54px);
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.bellum-about .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bellum-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: center;
+  gap: 62px;
+}
+
+.bellum-about-content {
+  max-width: 610px;
+}
+
+.bellum-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(18, 28, 45, 0.12);
+  border-radius: 999px;
+  background: rgba(247, 249, 252, 0.86);
+  color: #243044;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bellum-about-eyebrow span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0a84ff;
+  box-shadow: 0 0 0 6px rgba(10, 132, 255, 0.12);
+}
+
+.bellum-about-title {
+  margin: 24px 0 22px;
+  color: #101623;
+  font-size: 46px;
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.bellum-about-lead {
+  margin: 0;
+  color: #4a5567;
+  font-size: 18px;
+  line-height: 1.78;
+  font-weight: 500;
+}
+
+.bellum-about-points {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.bellum-about-points div {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 34px rgba(18, 28, 45, 0.06);
+}
+
+.bellum-about-points i {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  background: #101623;
+  color: #fff;
+}
+
+.bellum-about-points span {
+  color: #1f2a3d;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.bellum-about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.bellum-about-stats div {
+  padding: 18px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+
+.bellum-about-stats strong,
+.bellum-about-stats span {
+  display: block;
+}
+
+.bellum-about-stats strong {
+  color: #101623;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.bellum-about-stats span {
+  margin-top: 9px;
+  color: #657083;
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bellum-about-visual {
+  min-height: 560px;
+  position: relative;
+}
+
+.bellum-about-image {
+  position: absolute;
+  inset: 0 42px 34px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 34px 90px rgba(18, 28, 45, 0.18);
+}
+
+.bellum-about-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(16, 22, 35, 0.5), rgba(16, 22, 35, 0.06) 58%),
+    linear-gradient(to top, rgba(16, 22, 35, 0.42), transparent 60%);
+}
+
+.bellum-about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bellum-about-card {
+  position: absolute;
+  width: min(330px, 62%);
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 22px 54px rgba(18, 28, 45, 0.16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.bellum-about-card.top {
+  top: 44px;
+  right: 0;
+}
+
+.bellum-about-card.bottom {
+  left: 34px;
+  bottom: 0;
+}
+
+.bellum-about-card span,
+.bellum-about-card strong {
+  display: block;
+}
+
+.bellum-about-card span {
+  color: #657083;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bellum-about-card strong {
+  margin-top: 8px;
+  color: #101623;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.bellum-about-score {
+  position: absolute;
+  right: 0;
+  bottom: 38px;
+  width: 176px;
+  min-height: 176px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 50%;
+  background: rgba(16, 22, 35, 0.86);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(18, 28, 45, 0.24);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.bellum-about-score strong {
+  color: #fff;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.bellum-about-score span {
+  max-width: 100px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bellum-about-orbit {
+  position: absolute;
+  right: 64px;
+  bottom: 112px;
+  width: 142px;
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 50%;
+  background: rgba(16, 22, 35, 0.82);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(18, 28, 45, 0.24);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.bellum-about-orbit i {
+  color: #67d39b;
+  font-size: 26px;
+}
+
+.bellum-about-orbit span {
+  max-width: 86px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1199px) {
+  .bellum-about {
+    padding: 82px 0;
+  }
+
+  .bellum-about-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .bellum-about-content {
+    max-width: 760px;
+  }
+
+  .bellum-about-title {
+    font-size: 48px;
+  }
+
+  .bellum-about-visual {
+    min-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bellum-about {
+    padding: 32px 0;
+  }
+
+  .bellum-about-grid {
+    gap: 30px;
+  }
+
+  .bellum-about-title {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .bellum-about-lead {
+    font-size: 14px;
+    line-height: 1.68;
+  }
+
+  .bellum-about-points {
+    margin-top: 24px;
+  }
+
+  .bellum-about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .bellum-about-visual {
+    min-height: 470px;
+  }
+
+  .bellum-about-image {
+    inset: 0 0 88px 0;
+  }
+
+  .bellum-about-card {
+    width: calc(100% - 28px);
+    padding: 15px;
+  }
+
+  .bellum-about-card.top {
+    top: 18px;
+    right: 14px;
+  }
+
+  .bellum-about-card.bottom {
+    left: 14px;
+    bottom: 0;
+  }
+
+  .bellum-about-score {
+    right: 16px;
+    bottom: 24px;
+    width: 132px;
+    min-height: 132px;
+  }
+
+  .bellum-about-score strong {
+    font-size: 36px;
+  }
+
+  .bellum-about-orbit {
+    right: 18px;
+    bottom: 104px;
+    width: 112px;
+    height: 112px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .bellum-about-title {
+    font-size: 28px;
+  }
+
+  .bellum-about-eyebrow {
+    font-size: 12px;
+  }
+
+  .bellum-about-visual {
+    min-height: 450px;
+  }
+}
+
+.bellum-services {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+  background: linear-gradient(115deg, #f7f8fb 0%, #ffffff 48%, #eef6f4 100%);
+}
+
+.bellum-services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(16, 22, 35, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(16, 22, 35, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 86%);
+  pointer-events: none;
+}
+
+.bellum-services::after {
+  content: "";
+  position: absolute;
+  left: -16%;
+  bottom: -20%;
+  width: 52%;
+  height: 44%;
+  background: linear-gradient(90deg, rgba(10, 132, 255, 0.16), rgba(34, 177, 118, 0.14));
+  filter: blur(54px);
+  transform: rotate(6deg);
+  pointer-events: none;
+}
+
+.bellum-services .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bellum-services-head {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.bellum-services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(18, 28, 45, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #243044;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  box-shadow: 0 16px 44px rgba(31, 45, 70, 0.08);
+}
+
+.bellum-services-eyebrow span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22b176;
+  box-shadow: 0 0 0 6px rgba(34, 177, 118, 0.14);
+}
+
+.bellum-services-title {
+  margin: 22px 0 0;
+  color: #101623;
+  font-size: 56px;
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.bellum-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bellum-service-card {
+  min-width: 0;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 22px 58px rgba(18, 28, 45, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.bellum-service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 22, 35, 0.18);
+  box-shadow: 0 30px 76px rgba(18, 28, 45, 0.13);
+}
+
+.bellum-service-icon {
+  width: 68px;
+  height: 68px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: #101623;
+}
+
+.bellum-service-icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.bellum-service-icon i {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.bellum-service-card h5 {
+  margin: 34px 0 18px;
+  color: #101623;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.bellum-service-card p {
+  margin: 0;
+  color: #4a5567;
+  font-size: 16px;
+  line-height: 1.72;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1199px) {
+  .bellum-services {
+    padding: 82px 0;
+  }
+
+  .bellum-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bellum-service-card {
+    min-height: 0;
+  }
+
+  .bellum-services-title {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bellum-services {
+    padding: 58px 0;
+  }
+
+  .bellum-services-head {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .bellum-services-title {
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .bellum-service-card {
+    padding: 22px;
+  }
+
+  .bellum-service-card h5 {
+    margin-top: 24px;
+    font-size: 22px;
+  }
+
+  .bellum-service-card p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .bellum-services-title {
+    font-size: 32px;
+  }
+
+  .bellum-services-eyebrow {
+    font-size: 12px;
+  }
+}
+
+.bellum-partners {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 72px;
+  background: #fff;
+}
+
+.bellum-partners::before,
+.bellum-facts::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(16, 22, 35, 0.052) 1px, transparent 1px),
+    linear-gradient(rgba(16, 22, 35, 0.052) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, transparent 100%);
+  pointer-events: none;
+}
+
+.bellum-partners .container,
+.bellum-facts .container {
+  position: relative;
+  z-index: 2;
+}
+
+.bellum-partners-head {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.bellum-partners-head .pre {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(18, 28, 45, 0.12);
+  border-radius: 999px;
+  background: rgba(247, 249, 252, 0.86);
+  color: #243044;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bellum-partners-head .pre::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0a84ff;
+  box-shadow: 0 0 0 6px rgba(10, 132, 255, 0.12);
+}
+
+.bellum-partners-head .title {
+  margin: 22px 0 0;
+  color: #101623;
+  font-size: 46px;
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.bellum-partners .partners-grid {
+  margin-top: 42px;
+}
+
+.bellum-partners .partners-grid-wrapper {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.bellum-partners .partner-card {
+  min-height: 190px;
+  padding: 28px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 58px rgba(18, 28, 45, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.bellum-partners .partner-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 22, 35, 0.18);
+  box-shadow: 0 30px 76px rgba(18, 28, 45, 0.13);
+}
+
+.bellum-partners .partner-card img {
+  max-height: 106px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.bellum-facts {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 110px;
+  background: linear-gradient(115deg, #f7f8fb 0%, #ffffff 48%, #eef6f4 100%);
+}
+
+.bellum-facts::after {
+  content: "";
+  position: absolute;
+  right: -18%;
+  bottom: -24%;
+  width: 54%;
+  height: 48%;
+  background: linear-gradient(90deg, rgba(34, 177, 118, 0.15), rgba(10, 132, 255, 0.16));
+  filter: blur(54px);
+  transform: rotate(-7deg);
+  pointer-events: none;
+}
+
+.bellum-facts .bellum-facts-grid {
+  --bs-gutter-x: 18px;
+  --bs-gutter-y: 18px;
+}
+
+.bellum-facts .signle-fun-facts-one {
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 22px 58px rgba(18, 28, 45, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.bellum-facts .signle-fun-facts-one::before {
+  content: "";
+  position: absolute;
+  top: -46px;
+  right: -46px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(10, 132, 255, 0.12);
+}
+
+.bellum-facts .signle-fun-facts-one::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 24px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0a84ff, #22b176, #ffd16f);
+  opacity: 0.9;
+}
+
+.bellum-facts .signle-fun-facts-one > * {
+  position: relative;
+  z-index: 2;
+}
+
+.bellum-facts .signle-fun-facts-one:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 22, 35, 0.18);
+  box-shadow: 0 30px 76px rgba(18, 28, 45, 0.13);
+}
+
+.bellum-facts .signle-fun-facts-one .icon {
+  width: 68px;
+  height: 68px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: #101623;
+  box-shadow: 0 18px 40px rgba(16, 22, 35, 0.2);
+}
+
+.bellum-facts .signle-fun-facts-one .icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.bellum-facts .signle-fun-facts-one .icon i {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.bellum-facts .signle-fun-facts-one .counter.title {
+  margin: 30px 0 8px;
+  color: #101623;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.bellum-facts .signle-fun-facts-one span.bototm {
+  color: #657083;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1199px) {
+  .bellum-partners {
+    padding: 82px 0 58px;
+  }
+
+  .bellum-facts {
+    padding: 58px 0 82px;
+  }
+
+  .bellum-partners-head .title {
+    font-size: 48px;
+  }
+
+  .bellum-partners .partners-grid-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bellum-partners {
+    padding: 58px 0 38px;
+  }
+
+  .bellum-facts {
+    padding: 38px 0 58px;
+  }
+
+  .bellum-partners-head {
+    text-align: left;
+  }
+
+  .bellum-partners-head .title {
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .bellum-partners .partners-grid {
+    margin-top: 28px;
+  }
+
+  .bellum-partners .partner-card {
+    min-height: 150px;
+    padding: 22px;
+  }
+
+  .bellum-facts .signle-fun-facts-one {
+    min-height: 220px;
+    padding: 22px;
+  }
+
+  .bellum-facts .signle-fun-facts-one::after {
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+  }
+
+  .bellum-facts .signle-fun-facts-one .counter.title {
+    font-size: 46px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .bellum-partners-head .title {
+    font-size: 32px;
+  }
+
+  .bellum-partners-head .pre {
+    font-size: 12px;
+  }
+}
+
+.bellum-business {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0 !important;
+  background: #fff;
+}
+
+.bellum-business::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(16, 22, 35, 0.052) 1px, transparent 1px),
+    linear-gradient(rgba(16, 22, 35, 0.052) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 20%, transparent 100%);
+  pointer-events: none;
+}
+
+.bellum-business::after {
+  content: "";
+  position: absolute;
+  left: -18%;
+  top: 18%;
+  width: 54%;
+  height: 46%;
+  background: linear-gradient(90deg, rgba(10, 132, 255, 0.15), rgba(34, 177, 118, 0.14));
+  filter: blur(54px);
+  transform: rotate(7deg);
+  pointer-events: none;
+}
+
+.bellum-business .business-boost-wrapper-main {
+  position: relative;
+  z-index: 2;
+  padding: 110px 0;
+  background: transparent;
+}
+
+.bellum-business .bellum-business-grid {
+  align-items: center;
+}
+
+.bellum-business .business-marklting-area-thumb {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 34px 90px rgba(18, 28, 45, 0.18);
+}
+
+.bellum-business .business-marklting-area-thumb::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  z-index: 2;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0a84ff, #22b176, #ffd16f);
+}
+
+.bellum-business .business-marklting-area-thumb img {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  border-radius: 8px;
+  clip-path: none;
+}
+
+.bellum-business .boosting-business-right-area {
+  padding: 38px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 58px rgba(18, 28, 45, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  margin: 0 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  .bellum-business .boosting-business-right-area {
+    margin: 0;
+  }
+}
+
+.bellum-business .boosting-business-right-area .pre {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(18, 28, 45, 0.12);
+  border-radius: 999px;
+  background: rgba(247, 249, 252, 0.86);
+  color: #243044;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bellum-business .boosting-business-right-area .pre::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22b176;
+  box-shadow: 0 0 0 6px rgba(34, 177, 118, 0.14);
+}
+
+.bellum-business .boosting-business-right-area .title {
+  margin: 14px 0 12px;
+  color: #101623;
+  font-size: 36px;
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.bellum-business .boosting-business-right-area .disc {
+  margin: 0;
+  color: #4a5567;
+  font-size: 17px;
+  line-height: 1.76;
+  font-weight: 500;
+}
+
+.bellum-business .boosting-business-right-area .feature-one-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px !important;
+  padding-left: 0;
+}
+
+.bellum-business .boosting-business-right-area .feature-one-wrapper .single-feature-one {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 13px 14px;
+  border: 1px solid rgba(16, 22, 35, 0.1);
+  border-radius: 8px;
+  background: #f7f9fc;
+  box-shadow: none;
+}
+
+.bellum-business .boosting-business-right-area .feature-one-wrapper .single-feature-one i {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0;
+  border-radius: 8px;
+  background: #101623;
+  color: #fff;
+  font-size: 13px;
+}
+
+.bellum-business .boosting-business-right-area .feature-one-wrapper .single-feature-one p {
+  margin: 0;
+  color: #1f2a3d;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 1199px) {
+  .bellum-business .business-boost-wrapper-main {
+    padding: 82px 0;
+  }
+
+  .bellum-business .business-marklting-area-thumb {
+    min-height: 440px;
+    margin-bottom: 32px;
+  }
+
+  .bellum-business .business-marklting-area-thumb img {
+    min-height: 440px;
+  }
+
+  .bellum-business .boosting-business-right-area .title {
+    font-size: 46px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bellum-business .business-boost-wrapper-main {
+    padding: 58px 0;
+  }
+
+  .bellum-business .business-marklting-area-thumb {
+    min-height: 360px;
+  }
+
+  .bellum-business .business-marklting-area-thumb img {
+    min-height: 360px;
+  }
+
+  .bellum-business .boosting-business-right-area {
+    padding: 22px;
+  }
+
+  .bellum-business .boosting-business-right-area .title {
+    font-size: 36px;
+    line-height: 1.08;
+  }
+
+  .bellum-business .boosting-business-right-area .disc {
+    font-size: 16px;
+    line-height: 1.68;
+  }
+
+  .bellum-business .boosting-business-right-area .feature-one-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .bellum-business .boosting-business-right-area .title {
+    font-size: 30px;
+  }
+
+  .bellum-business .boosting-business-right-area .pre {
+    font-size: 12px;
   }
 }
