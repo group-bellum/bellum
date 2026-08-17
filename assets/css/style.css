@@ -11,7 +11,7 @@
   --shadow: 0 22px 58px rgba(18, 28, 45, 0.08);
   --shadow-strong: 0 34px 90px rgba(18, 28, 45, 0.18);
   --radius: 8px;
-  --font: "Manrope", sans-serif;
+  --font: "Manrope", "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -577,6 +577,12 @@ ul {
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
   align-items: center;
   gap: 22px;
+}
+
+@media screen and (min-width: 1200px) {
+  .bellum-about-grid {
+    gap: 62px;
+  }
 }
 
 .bellum-about-content {
