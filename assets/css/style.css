@@ -576,7 +576,7 @@ ul {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
   align-items: center;
-  gap: 62px;
+  gap: 22px;
 }
 
 .bellum-about-content {
@@ -795,9 +795,9 @@ ul {
 .bellum-facts .signle-fun-facts-one::after {
   content: "";
   position: absolute;
-  left: 28px;
-  right: 28px;
-  bottom: 24px;
+  left: 22px;
+  right: 22px;
+  bottom: 17px;
   height: 5px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--blue), var(--green), var(--gold));
@@ -844,18 +844,6 @@ ul {
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow-strong);
-}
-
-.business-marklting-area-thumb::after {
-  content: "";
-  position: absolute;
-  left: 28px;
-  right: 28px;
-  bottom: 28px;
-  z-index: 2;
-  height: 6px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--blue), var(--green), var(--gold));
 }
 
 .business-marklting-area-thumb img {
@@ -995,6 +983,8 @@ ul {
 
 .bellum-footer-logo img {
   width: auto;
+  height: min-content !important;
+  max-height: min-content !important;
 }
 
 .banner-color-black {
@@ -1349,7 +1339,7 @@ ul {
 
   .header-main-one-wrapper .thumbnail img,
   .mobile-logo {
-    max-height: 42px;
+    max-height: 56px;
     max-width: 176px;
     width: auto;
   }
@@ -1419,7 +1409,6 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
-  .bellum-hero,
   .bellum-about,
   .bellum-services,
   .bellum-partners,
@@ -1429,12 +1418,17 @@ ul {
     padding-bottom: 58px;
   }
 
+  .bellum-hero {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   .bellum-hero-grid {
     min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 30px;
+    gap: 12px;
   }
 
   .bellum-hero-copy {
@@ -1581,6 +1575,7 @@ ul {
   .bellum-partners-head .title,
   .boosting-business-right-area .title {
     font-size: 30px;
+    margin: 14px 0 0px;
   }
 
   .bellum-hero-eyebrow,
