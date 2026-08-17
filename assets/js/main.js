@@ -10,25 +10,12 @@
     callback();
   }
 
-  window.addEventListener("load", function () {
-    document.body.classList.add("loaded");
-  });
-
   ready(function () {
-    var header = document.querySelector(".header--sticky");
     var menuButton = document.querySelector(".menu-btn");
     var sideBar = document.getElementById("side-bar");
     var closeButton = document.querySelector(".close-icon-menu");
     var progressWrap = document.querySelector(".progress-wrap");
     var progressPath = document.querySelector(".progress-wrap path");
-
-    function updateStickyHeader() {
-      if (!header) {
-        return;
-      }
-
-      header.classList.toggle("sticky", window.scrollY > 150);
-    }
 
     function toggleSidebar(show) {
       if (sideBar) {
@@ -65,42 +52,9 @@
       });
     }
 
-    function animateRadialProgress() {
-      document.querySelectorAll("svg.radial-progress").forEach(function (svg) {
-        if (svg.dataset.done === "true") {
-          return;
-        }
-
-        var rect = svg.getBoundingClientRect();
-        if (rect.top >= window.innerHeight || rect.bottom < 0) {
-          return;
-        }
-
-        var circle = svg.querySelector("circle.bar--animated");
-        var text = svg.querySelector(".countervalue");
-        var value = Number(svg.dataset.countervalue || 0);
-
-        if (circle) {
-          var radius = Number(circle.getAttribute("r") || 0);
-          var circumference = 2 * Math.PI * radius;
-          circle.style.strokeDasharray = circumference;
-          circle.style.strokeDashoffset = circumference - (value / 100) * circumference;
-        }
-
-        if (text) {
-          text.textContent = value + "%";
-          text.classList.remove("start");
-        }
-
-        svg.dataset.done = "true";
-      });
-    }
-
     function onScroll() {
-      updateStickyHeader();
       updateProgress();
       animateOdometers();
-      animateRadialProgress();
     }
 
     if (menuButton) {

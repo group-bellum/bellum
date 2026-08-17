@@ -19,8 +19,8 @@
     <link rel="stylesheet preload" href="assets/css/style.css" as="style" />
 </head>
 
-<body class="index-one">
-    <header class="header-one header--sticky">
+<body>
+    <header class="header-one">
         <div class="header-top-area-wrapper">
             <div class="container">
                 <div class="row">
@@ -62,30 +62,24 @@
                             </div>
                             <div class="main-header">
                                 <div class="nav-area">
-                                    <ul class="">
-                                        <li class="main-nav">
+                                    <ul>
+                                        <li>
                                             <a href="/">Ana Sayfa</a>
                                         </li>
-                                        <li class="main-nav">
+                                        <li>
                                             <a href="#about-section">Hakkımızda</a>
                                         </li>
-                                        <li class="main-nav">
+                                        <li>
                                             <a href="#services-section">Hizmetlerimiz</a>
                                         </li>
-                                        <li class="main-nav">
+                                        <li>
                                             <a href="#business-section">Danışmanlık</a>
                                         </li>
                                     </ul>
                                 </div>
-
-                                <div class="loader-wrapper">
-                                    <div class="loader"></div>
-                                    <div class="loader-section section-left"></div>
-                                    <div class="loader-section section-right"></div>
-                                </div>
                                 <div class="button-area">
-                                    <button id="menu-btn" aria-label="Menu" class="menu-btn menu ml--20 ml_sm--5">
-                                        <img class="menu-light" src="assets/images/icons/01.svg" alt="Menu-icon" decoding="async" />
+                                    <button id="menu-btn" aria-label="Menu" class="menu-btn">
+                                        <img src="assets/images/icons/01.svg" alt="Menu-icon" decoding="async" />
                                     </button>
                                 </div>
                             </div>
@@ -97,7 +91,7 @@
     </header>
 
     <!-- rts banner area start -->
-    <div class="rts-banner-area banner-style-one bellum-hero">
+    <div class="bellum-hero">
         <div class="container">
             <div class="bellum-hero-grid">
                 <div class="bellum-hero-copy">
@@ -164,8 +158,8 @@
     </div>
     <!-- rts banner area end -->
 
-    <!-- rts-about area start -->
-    <div id="about-section" class="rts-about-area rts-section-gap bellum-about">
+    <!-- about area start -->
+    <div id="about-section" class="bellum-about">
         <div class="container">
             <div class="bellum-about-grid">
                 <div class="bellum-about-content">
@@ -185,17 +179,17 @@
                         <img src="assets/images/about/test.webp" alt="Bellum Group çalışma alanı" loading="lazy" decoding="async" />
                     </div>
                     <div class="bellum-about-score">
-                        <strong>92</strong>
+                        <strong>92%</strong>
                         <span>Başarı Oranı</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- rts-about area end -->
+    <!-- about area end -->
 
     <!-- rts latest service area start -->
-    <div id="services-section" class="rts-latest-service-area rts-section-gap bellum-services">
+    <div id="services-section" class="bellum-services">
         <div class="container">
             <div class="bellum-services-head">
                 <div class="bellum-services-eyebrow">
@@ -236,81 +230,24 @@
         </div>
     </div>
     <!-- rts latest service area end -->
-
-    <!-- rts just a consultancy area  -->
-    <!-- <div id="cons-section" class="just-a-consultancy-area rts-section-gap">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="consultancy-thumbnail-area">
-                        <div class="large-image">
-                            <img src="assets/images/service/service-big.webp" alt="big pic" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="small-iamge images-r">
-                            <img src="assets/images/service/service-small.webp" alt="small pic" loading="lazy" decoding="async" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pl--50 pl_sm--15 mt_md--100 mt_sm--100">
-                    <div class="consultancy-style-one">
-                        <div class="title-style-one left mb--30">
-                            <span class="pre">Danışmanlık</span>
-                            <h2 class="title rts-text-anime-style-1">
-                                İşinizi Global Ölçekte <br />
-                                Yönetiyoruz
-                            </h2>
-                        </div>
-                        <div class="signle-consultancy mb--30" data-animation="fadeInUp" data-delay="0.2"
-                            data-duration="1.2">
-                            <div class="icon">
-                                <img src="assets/images/about/icons/01.svg" alt="about icon" loading="lazy" decoding="async" />
-                            </div>
-                            <div class="information">
-                                <h4 class="title">Profesyonel Marka Danışmanlığı</h4>
-                                <p class="disc">
-                                    Markaların çalışma süreçlerini, stratejik ve kontrollü
-                                    şekilde yönetiyoruz.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="signle-consultancy" data-animation="fadeInUp" data-delay="0.4" data-duration="1.2">
-                            <div class="icon">
-                                <img src="assets/images/about/icons/02.svg" alt="about icon" loading="lazy" decoding="async" />
-                            </div>
-                            <div class="information">
-                                <h4 class="title">7/24 Süreç ve İletişim Desteği</h4>
-                                <p class="disc">
-                                    Tüm iş birliklerinde kesintisiz iletişim ve şeffaf süreç takibi sağlıyoruz.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- <div class="button-wrapper mt--40" data-animation="fadeInUp" data-delay="0.4"
-                            data-duration="1.2">
-                            <a href="tel:+905310245518" class="rts-btn btn-primary">Bizi Arayın</a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
         <!-- partnerlerimiz area start -->
-        <div class="partners-area-main rts-section-gapTop bellum-partners">
+        <div class="bellum-partners">
             <div class="container">
-                <div class="title-style-one center bellum-partners-head">
+                <div class="bellum-partners-head">
                     <span class="pre">Faaliyet Alanlarımız</span>
-                    <h2 class="title rts-text-anime-style-1">Grup Şirketlerimiz</h2>
+                    <h2 class="title">Grup Şirketlerimiz</h2>
                 </div>
-                <div class="partners-grid mt--40">
+                <div class="partners-grid">
                     <div id="partnersGrid" class="partners-grid-wrapper"></div>
                 </div>
             </div>
         </div>
         <!-- partnerlerimiz area end -->
         <!-- rts fun facts area start -->
-        <div class="rts-fun-facts-area rts-section-gap mt--10 pt--10 bellum-facts">
+        <div class="bellum-facts">
             <div class="container">
                 <div class="row g-5 bellum-facts-grid">
-                    <div class="col-lg-4" data-animation="fadeInUp" data-delay="0.2" data-duration="1.2">
+                    <div class="col-lg-4">
                         <div class="signle-fun-facts-one">
                             <div class="icon">
                                 <i class="fal fa-building"></i>
@@ -321,7 +258,7 @@
                             <span class="bototm">İnşaat</span>
                         </div>
                     </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-delay="0.4" data-duration="1.2">
+                    <div class="col-lg-4">
                         <div class="signle-fun-facts-one">
                             <div class="icon">
                                 <i class="fal fa-handshake"></i>
@@ -332,7 +269,7 @@
                             <span class="bototm">Danışmanlık</span>
                         </div>
                     </div>
-                    <div class="col-lg-4" data-animation="fadeInUp" data-delay="0.6" data-duration="1.2">
+                    <div class="col-lg-4">
                         <div class="signle-fun-facts-one">
                             <div class="icon">
                                 <i class="fal fa-key"></i>
@@ -351,52 +288,45 @@
         
 
         <!-- business boost area start -->
-        <div class="boost-your-business-today mt--70 bellum-business">
-            <div class="container-2">
-                <div class="col-lg-12">
-                    <div id="business-section" class="business-boost-wrapper-main rts-section-gap">
-                        <div class="container">
-                            <div class="row bellum-business-grid">
-                                <div class="col-lg-6">
-                                    <div class="business-marklting-area-thumb">
-                                        <img src="assets/images/business/business.webp" alt="business_area" loading="lazy" decoding="async" />
-                                    </div>
+        <div id="business-section" class="bellum-business">
+            <div class="container">
+                <div class="row bellum-business-grid">
+                    <div class="col-lg-6">
+                        <div class="business-marklting-area-thumb">
+                            <img src="assets/images/business/business.webp" alt="business_area" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="boosting-business-right-area">
+                            <div>
+                                <span class="pre">Doğru Adımlarla Büyüyün</span>
+                                <h2 class="title">
+                                    Güvenilir Partnerlik
+                                </h2>
+                            </div>
+                            <p class="disc">
+                                Stratejik iş partnerliğinizi hızlı ve
+                                doğru
+                                şekilde yönetiyoruz.
+                                Her adımı ölçülebilir sonuçlar ve sürdürülebilir iş birlikleri üzerine
+                                kurmayı hedefliyoruz.
+                            </p>
+                            <div class="feature-one-wrapper">
+                                <div class="single-feature-one active">
+                                    <i class="fal fa-check"></i>
+                                    <p>Gayrimenkul Yatırımı</p>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="boosting-business-right-area">
-                                        <div class="title-style-one left">
-                                            <span class="pre">Doğru Adımlarla Büyüyün</span>
-                                            <h2 class="title rts-text-anime-style-1">
-                                                Güvenilir Partnerlik
-                                            </h2>
-                                        </div>
-                                        <p class="disc">
-                                            Stratejik iş partnerliğinizi hızlı ve
-                                            doğru
-                                            şekilde yönetiyoruz.
-                                            Her adımı ölçülebilir sonuçlar ve sürdürülebilir iş birlikleri üzerine
-                                            kurmayı hedefliyoruz.
-                                        </p>
-                                        <div class="feature-one-wrapper mt--40 pl_sm--0">
-                                            <div class="single-feature-one active">
-                                                <i class="fal fa-check"></i>
-                                                <p>Gayrimenkul Yatırımı</p>
-                                            </div>
-                                            <div class="single-feature-one">
-                                                <i class="fal fa-check"></i>
-                                                <p>Profesyonel Danışmanlık</p>
-                                            </div>
-                                            <div class="single-feature-one">
-                                                <i class="fal fa-check"></i>
-                                                <p>Proje Geliştirme</p>
-                                            </div>
-
-                                            <div class="single-feature-one">
-                                                <i class="fal fa-check"></i>
-                                                <p>Alım Satım Desteği</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="single-feature-one">
+                                    <i class="fal fa-check"></i>
+                                    <p>Profesyonel Danışmanlık</p>
+                                </div>
+                                <div class="single-feature-one">
+                                    <i class="fal fa-check"></i>
+                                    <p>Proje Geliştirme</p>
+                                </div>
+                                <div class="single-feature-one">
+                                    <i class="fal fa-check"></i>
+                                    <p>Alım Satım Desteği</p>
                                 </div>
                             </div>
                         </div>
@@ -406,7 +336,7 @@
         </div>
         <!-- business boost area end -->
 
-        <div class="rts-footer-area pt--100 pb--100 pt_sm--50 pb_sm--40 footer-two footer-bg-two bellum-footer bellum-footer-redesign">
+        <div class="bellum-footer-redesign">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -431,7 +361,7 @@
                                 <div class="wized-title-area">
                                     <h5 class="wized-title">Bize Ulaşın</h5>
                                 </div>
-                                <h3 class="title animated fadeIn">
+                                <h3 class="title">
                                     <span>Mailinizi Bekliyoruz!</span>
                                 </h3>
                                 <div class="contact-info-1">
@@ -450,12 +380,11 @@
             </div>
         </div>
 
-        <div id="side-bar" class="side-bar header-two">
+        <div id="side-bar" class="side-bar">
             <button class="close-icon-menu" title="Menüyü kapat" aria-label="Menüyü kapat">
                 <i class="far fa-times"></i>
             </button>
-            <!-- inner menu area desktop start -->
-            <div class="rts-sidebar-menu-desktop">
+            <div class="bellum-sidebar-shell">
                 <div class="bellum-menu-head">
                     <a href="/" class="bellum-menu-logo">
                         <img src="assets/images/logo/desktop.png" alt="bellum-logo" loading="lazy" decoding="async" />
@@ -481,7 +410,7 @@
                             <i class="fal fa-arrow-right"></i>
                         </a>
                     </nav>
-                    <div class="get-in-touch bellum-menu-contact">
+                    <div class="bellum-menu-contact">
                         <div class="h6 title">İletişim</div>
                         <div class="wrapper">
                             <div class="single">
@@ -501,7 +430,7 @@
 
         <!-- progress area start -->
         <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <svg width="100%" height="100%" viewBox="-1 -1 102 102">
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="
             transition: stroke-dashoffset 10ms linear 0s;
             stroke-dasharray: 307.919, 307.919;
@@ -516,13 +445,6 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
 
 
 
