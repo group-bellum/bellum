@@ -21,6 +21,8 @@
       if (sideBar) {
         sideBar.classList.toggle("show", show);
       }
+
+      document.body.classList.toggle("menu-open", show);
     }
 
     function updateProgress() {
