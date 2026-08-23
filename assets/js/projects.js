@@ -10,21 +10,21 @@ window.projectGalleryItems = [
     name: "Onem Classic",
     location: "Beylerbeyi",
     folder: "./assets/images/projects/onem/",
-    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"]
+    files: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp"]
   },
    {
     status: "active",
     name: "Eti Bakır Madeni",
     location: "Sinop",
     folder: "./assets/images/projects/eti/",
-    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"]
+    files: ["01.webp", "02.webp", "03.webp", "04.webp"]
   },
   {
     status: "completed",
     name: "TRT Ratelvak Konutları",
     location: "Çekmeköy",
     folder: "./assets/images/projects/trt/",
-    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"]
+    files: ["01.webp", "02.webp", "03.webp", "04.webp"]
   },
 ];
 
