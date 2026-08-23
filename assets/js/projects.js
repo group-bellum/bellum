@@ -158,13 +158,26 @@ window.projectGalleryItems = [
     }
 
     var image = lightbox.querySelector("[data-lightbox-image]");
+    var stack = lightbox.querySelector("[data-lightbox-stack]");
     var title = lightbox.querySelector("[data-lightbox-title]");
     var count = lightbox.querySelector("[data-lightbox-count]");
     var total = images.length;
     var activeImage = images[state.activeImageIndex];
 
+    if (!stack) {
+      stack = document.createElement("div");
+      stack.className = "project-lightbox-stack";
+      stack.setAttribute("data-lightbox-stack", "");
+      image.insertAdjacentElement("afterend", stack);
+    }
+
     image.src = activeImage;
     image.alt = state.activeProject.name;
+    stack.innerHTML = images
+      .map(function (src, index) {
+        return '<img src="' + escapeHtml(src) + '" alt="' + escapeHtml(state.activeProject.name) + ' ' + String(index + 1) + '" loading="lazy" />';
+      })
+      .join("");
     title.textContent = state.activeProject.name;
     count.textContent = String(state.activeImageIndex + 1) + " / " + String(total);
   }
