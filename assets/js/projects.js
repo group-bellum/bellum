@@ -3,7 +3,6 @@
    - For sub folders, use folder + files. Example:
      { status: "active", name: "Villa Projesi", folder: "./assets/images/projects/villa", files: ["01.jpg", "02.jpg"] }
    - If files are named 01.jpg, 02.jpg, 03.jpg, you can use count + extension instead of files.
-   - For mobile vertical photos, add mobileFolder + mobileFiles or mobileCover.
 */
 window.projectGalleryItems = [
   {
@@ -12,8 +11,6 @@ window.projectGalleryItems = [
     location: "Beylerbeyi",
     folder: "./assets/images/projects/onem/",
     files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"],
-    mobileFolder: "./assets/images/projects/onem/mobile",
-    mobileFiles: ["01.jpg", "02.jpg", "03.jpg"]
   },
    {
     status: "active",
@@ -39,7 +36,6 @@ window.projectGalleryItems = [
     projects: [],
     activeProject: null,
     activeImageIndex: 0,
-    isMobile: false,
   };
 
   function ready(callback) {
@@ -85,25 +81,13 @@ window.projectGalleryItems = [
       ? project.files
       : buildNumberedFiles(project.count, project.extension);
     var folder = project.folder ? project.folder.replace(/\/$/, "") : "";
-    var mobileFiles = Array.isArray(project.mobileFiles) && project.mobileFiles.length
-      ? project.mobileFiles
-      : buildNumberedFiles(project.mobileCount, project.mobileExtension || project.extension);
-    var mobileFolder = project.mobileFolder ? project.mobileFolder.replace(/\/$/, "") : folder;
     var images = files.map(function (file) {
       return resolveAsset(folder, file);
     });
-    var mobileImages = mobileFiles.map(function (file) {
-      return resolveAsset(mobileFolder, file);
-    });
     var cover = project.cover ? resolveAsset(folder, project.cover) : images[0] || "";
-    var mobileCover = project.mobileCover ? resolveAsset(mobileFolder, project.mobileCover) : mobileImages[0] || cover;
 
     if (!images.length && cover) {
       images = [cover];
-    }
-
-    if (!mobileImages.length && mobileCover) {
-      mobileImages = [mobileCover];
     }
 
     return {
@@ -112,18 +96,16 @@ window.projectGalleryItems = [
       name: project.name || "Proje " + String(index + 1).padStart(2, "0"),
       location: project.location || "",
       images: images,
-      mobileImages: mobileImages,
       cover: cover,
-      mobileCover: mobileCover,
     };
   }
 
   function getProjectImages(project) {
-    return state.isMobile && project.mobileImages.length ? project.mobileImages : project.images;
+    return project.images;
   }
 
   function getProjectCover(project) {
-    return state.isMobile && project.mobileCover ? project.mobileCover : project.cover;
+    return project.cover;
   }
 
   function getFilteredProjects() {
@@ -218,17 +200,14 @@ window.projectGalleryItems = [
     var gallery = document.querySelector("[data-project-gallery]");
     var track = document.getElementById("projectsTrack");
     var lightbox = document.querySelector("[data-project-lightbox]");
-    var mobileMedia = window.matchMedia("(max-width: 767px)");
 
     if (!gallery || !track || !lightbox || !Array.isArray(window.projectGalleryItems)) {
       return;
     }
 
-    state.isMobile = mobileMedia.matches;
-
     state.projects = window.projectGalleryItems
       .filter(function (project) {
-        return project && (project.files || project.count || project.cover || project.mobileFiles || project.mobileCount || project.mobileCover);
+        return project && (project.files || project.count || project.cover);
       })
       .map(normalizeProject);
 
@@ -300,16 +279,6 @@ window.projectGalleryItems = [
 
       if (event.key === "ArrowLeft") {
         moveLightbox(-1, lightbox);
-      }
-    });
-
-    mobileMedia.addEventListener("change", function (event) {
-      state.isMobile = event.matches;
-      renderProjects(track);
-
-      if (lightbox.classList.contains("open")) {
-        state.activeImageIndex = 0;
-        updateLightbox(lightbox);
       }
     });
   });

@@ -1883,10 +1883,6 @@ body.project-gallery-open .progress-wrap {
     padding-right: 18px;
   }
 
-  .project-card-media {
-    aspect-ratio: 3 / 4;
-  }
-
   .project-nav {
     display: none;
   }
