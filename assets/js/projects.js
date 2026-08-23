@@ -10,21 +10,21 @@ window.projectGalleryItems = [
     name: "Onem Classic",
     location: "Beylerbeyi",
     folder: "./assets/images/projects/onem/",
-    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"],
+    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"]
   },
    {
     status: "active",
-    name: "Aktif Proje",
-    location: "Devam Eden Çalışma",
-    folder: "./assets/images/banner",
-    files: ["hero.webp"],
+    name: "Eti Bakır Madeni",
+    location: "Sinop",
+    folder: "./assets/images/projects/eti/",
+    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"]
   },
   {
     status: "completed",
-    name: "Tamamlanan Proje",
-    location: "Teslim Edilen Çalışma",
-    folder: "./assets/images/business",
-    files: ["business.webp"],
+    name: "TRT Ratelvak Konutları",
+    location: "Çekmeköy",
+    folder: "./assets/images/projects/trt/",
+    files: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"]
   },
 ];
 
@@ -32,7 +32,6 @@ window.projectGalleryItems = [
   "use strict";
 
   var state = {
-    filter: "active",
     projects: [],
     activeProject: null,
     activeImageIndex: 0,
@@ -108,14 +107,12 @@ window.projectGalleryItems = [
     return project.cover;
   }
 
-  function getFilteredProjects() {
-    return state.projects.filter(function (project) {
-      return project.status === state.filter;
-    });
+  function getStatusLabel(project) {
+    return project.status === "completed" ? "Biten Proje" : "Aktif Proje";
   }
 
   function renderProjects(track) {
-    var projects = getFilteredProjects();
+    var projects = state.projects;
     var isStatic = projects.length < 3;
 
     track.classList.toggle("is-static", isStatic);
@@ -134,6 +131,7 @@ window.projectGalleryItems = [
         return (
           '<article class="project-card" data-project-index="' + index + '">' +
           '<button class="project-card-media" type="button" aria-label="' + escapeHtml(project.name) + ' galerisini aç">' +
+          '<strong class="project-status-badge ' + escapeHtml(project.status) + '">' + escapeHtml(getStatusLabel(project)) + "</strong>" +
           '<img src="' + escapeHtml(getProjectCover(project)) + '" alt="' + escapeHtml(project.name) + '" loading="lazy" />' +
           '<span><i class="fal fa-expand"></i></span>' +
           "</button>" +
@@ -226,19 +224,6 @@ window.projectGalleryItems = [
 
     renderProjects(track);
 
-    gallery.querySelectorAll("[data-project-filter]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        state.filter = button.dataset.projectFilter;
-        gallery.querySelectorAll("[data-project-filter]").forEach(function (tab) {
-          var isActive = tab === button;
-          tab.classList.toggle("active", isActive);
-          tab.setAttribute("aria-selected", isActive ? "true" : "false");
-        });
-        renderProjects(track);
-        track.scrollTo({ left: 0, behavior: "smooth" });
-      });
-    });
-
     gallery.querySelectorAll("[data-project-nav]").forEach(function (button) {
       button.addEventListener("click", function () {
         if (track.classList.contains("is-static")) {
@@ -252,13 +237,12 @@ window.projectGalleryItems = [
 
     track.addEventListener("click", function (event) {
       var card = event.target.closest(".project-card");
-      var filteredProjects = getFilteredProjects();
 
       if (!card) {
         return;
       }
 
-      openLightbox(filteredProjects[Number(card.dataset.projectIndex)], 0, lightbox);
+      openLightbox(state.projects[Number(card.dataset.projectIndex)], 0, lightbox);
     });
 
     lightbox.querySelector("[data-project-close]").addEventListener("click", function () {

@@ -602,9 +602,9 @@ ul {
 .bellum-projects-head .title,
 .bellum-partners-head .title,
 .boosting-business-right-area .title {
-  margin: 22px 0 20px;
+  margin: 22px 0 28px;
   color: var(--ink);
-  font-size: 46px;
+  font-size: 36px;
   line-height: 1.04;
   font-weight: 800;
   letter-spacing: 0;
@@ -652,7 +652,7 @@ ul {
 
 /* Services */
 .bellum-services {
-  padding: 110px 0;
+  padding: 60px 0;
 }
 
 .bellum-services::after {
@@ -667,7 +667,7 @@ ul {
 .bellum-projects-head,
 .bellum-partners-head {
   max-width: 760px;
-  margin: 0 auto 42px;
+  margin: 0 auto 4px;
   text-align: center;
 }
 
@@ -741,7 +741,7 @@ ul {
 
 /* Projects */
 .bellum-projects {
-  padding: 100px 0 72px;
+  padding: 48px 0 36px;
   background: linear-gradient(180deg, #f7f8fb 0%, #fff 100%);
 }
 
@@ -757,51 +757,16 @@ ul {
   position: relative;
 }
 
-.project-gallery-tabs {
-  width: fit-content;
-  max-width: 100%;
-  display: flex;
-  gap: 8px;
-  margin: 0 auto 26px;
-  padding: 7px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: var(--shadow);
-}
-
-.project-tab {
-  min-height: 48px;
-  padding: 0 20px;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-tab.active {
-  background: var(--ink);
-  color: #fff;
-  box-shadow: 0 14px 36px rgba(16, 22, 35, 0.18);
-}
-
 .project-carousel-wrap {
   position: relative;
 }
 
 .project-track {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(310px, 31%);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  overflow-x: auto;
-  padding: 8px 4px 24px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  overflow: visible;
+  padding: 8px 0 48px;
 }
 
 .project-track::-webkit-scrollbar {
@@ -809,20 +774,27 @@ ul {
 }
 
 .project-track.is-static {
-  display: flex;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
-  flex-wrap: wrap;
-  overflow: visible;
-  padding-left: 0;
-  padding-right: 0;
-  scroll-snap-type: none;
 }
 
 .project-track.is-static .project-card {
-  width: min(100%, 360px);
+  width: auto;
+  max-width: none;
+}
+
+.project-track.is-static .project-card:only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 420px);
+  max-width: min(100%, 420px);
 }
 
 .project-carousel-wrap.is-static .project-nav {
+  display: none;
+}
+
+.project-carousel-wrap .project-nav {
   display: none;
 }
 
@@ -851,6 +823,29 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.project-status-badge {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  z-index: 2;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(16, 22, 35, 0.86);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(16, 22, 35, 0.18);
+}
+
+.project-status-badge.active {
+  background: rgba(34, 177, 118, 0.92);
+}
+
+.project-status-badge.completed {
+  background: rgba(16, 22, 35, 0.88);
 }
 
 .project-card-media span {
@@ -883,7 +878,7 @@ ul {
 .project-card-body h3 {
   margin: 0 0 8px;
   color: var(--ink);
-  font-size: 21px;
+  font-size: 17px;
   line-height: 1.22;
   font-weight: 800;
 }
@@ -1007,8 +1002,8 @@ body.project-gallery-open .progress-wrap {
 .project-lightbox-close,
 .project-lightbox-nav {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1039,7 +1034,7 @@ body.project-gallery-open .progress-wrap {
 
 /* Partners */
 .bellum-partners {
-  padding: 100px 0 72px;
+  padding: 60px 0;
 }
 
 .bellum-partners .partners-grid {
@@ -1703,7 +1698,7 @@ body.project-gallery-open .progress-wrap {
   }
 
   .project-track {
-    grid-auto-columns: minmax(300px, 48%);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-nav.prev {
@@ -1746,8 +1741,8 @@ body.project-gallery-open .progress-wrap {
   .bellum-partners,
   .bellum-facts,
   .bellum-business {
-    padding-top: 58px;
-    padding-bottom: 58px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
   }
 
@@ -1869,22 +1864,18 @@ body.project-gallery-open .progress-wrap {
     min-height: 0;
   }
 
-  .project-gallery-tabs {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .project-tab {
-    min-height: 46px;
-    padding: 0 10px;
-    font-size: 13px;
-  }
-
   .project-track {
-    grid-auto-columns: minmax(260px, 86%);
+    grid-template-columns: 1fr;
     gap: 14px;
-    padding-right: 18px;
+  }
+
+  .project-track.is-static {
+    grid-template-columns: 1fr;
+  }
+
+  .project-track.is-static .project-card {
+    width: 100%;
+    max-width: 100%;
   }
 
   .project-nav {
@@ -1988,7 +1979,7 @@ body.project-gallery-open .progress-wrap {
   .bellum-partners-head .title,
   .boosting-business-right-area .title {
     font-size: 24px;
-    margin: 14px 0 14px;
+    margin: 14px 0 4px;
   }
 
   
