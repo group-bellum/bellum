@@ -73,6 +73,9 @@
                                             <a href="#services-section">Hizmetlerimiz</a>
                                         </li>
                                         <li>
+                                            <a href="#projects-section">Projelerimiz</a>
+                                        </li>
+                                        <li>
                                             <a href="#business-section">Danışmanlık</a>
                                         </li>
                                     </ul>
@@ -230,6 +233,53 @@
         </div>
     </div>
     <!-- rts latest service area end -->
+        <!-- projelerimiz area start -->
+        <section id="projects-section" class="bellum-projects">
+            <div class="container">
+                <div class="bellum-projects-head">
+                    <span class="pre">Projelerimiz</span>
+                    <h2 class="title">Aktif ve Tamamlanan Projeler</h2>
+                </div>
+                <div class="project-gallery-shell" data-project-gallery>
+                    <div class="project-gallery-tabs" role="tablist" aria-label="Proje kategorileri">
+                        <button class="project-tab active" type="button" data-project-filter="active" role="tab" aria-selected="true">
+                            Aktif Projelerimiz
+                        </button>
+                        <button class="project-tab" type="button" data-project-filter="completed" role="tab" aria-selected="false">
+                            Biten Projelerimiz
+                        </button>
+                    </div>
+                    <div class="project-carousel-wrap">
+                        <button class="project-nav prev" type="button" data-project-nav="prev" aria-label="Önceki projeler">
+                            <i class="fal fa-arrow-left"></i>
+                        </button>
+                        <div id="projectsTrack" class="project-track" aria-live="polite"></div>
+                        <button class="project-nav next" type="button" data-project-nav="next" aria-label="Sonraki projeler">
+                            <i class="fal fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="project-lightbox" data-project-lightbox aria-hidden="true">
+                <button class="project-lightbox-close" type="button" data-project-close aria-label="Galeriyi kapat">
+                    <i class="fal fa-times"></i>
+                </button>
+                <button class="project-lightbox-nav prev" type="button" data-lightbox-nav="prev" aria-label="Önceki görsel">
+                    <i class="fal fa-angle-left"></i>
+                </button>
+                <figure class="project-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Proje görselleri">
+                    <img data-lightbox-image src="" alt="" />
+                    <figcaption>
+                        <strong data-lightbox-title></strong>
+                        <span data-lightbox-count></span>
+                    </figcaption>
+                </figure>
+                <button class="project-lightbox-nav next" type="button" data-lightbox-nav="next" aria-label="Sonraki görsel">
+                    <i class="fal fa-angle-right"></i>
+                </button>
+            </div>
+        </section>
+        <!-- projelerimiz area end -->
         <!-- partnerlerimiz area start -->
         <div class="bellum-partners">
             <div class="container">
@@ -405,6 +455,10 @@
                             <span>Hizmetlerimiz</span>
                             <i class="fal fa-arrow-right"></i>
                         </a>
+                        <a href="#projects-section">
+                            <span>Projelerimiz</span>
+                            <i class="fal fa-arrow-right"></i>
+                        </a>
                         <a href="#business-section">
                             <span>Danışmanlık</span>
                             <i class="fal fa-arrow-right"></i>
@@ -440,6 +494,7 @@
         </div>
         <!-- progress area end -->
 
+        <script defer src="assets/js/projects.js"></script>
         <script defer src="assets/js/partners.js"></script>
         <script defer src="assets/js/main.js"></script>
 </body>

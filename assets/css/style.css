@@ -270,6 +270,7 @@ ul {
 
 .bellum-hero::after,
 .bellum-services::after,
+.bellum-projects::after,
 .bellum-facts::after,
 .bellum-business::after,
 .bellum-about::after {
@@ -300,6 +301,7 @@ ul {
 .bellum-hero-eyebrow,
 .bellum-about-eyebrow,
 .bellum-services-eyebrow,
+.bellum-projects-head .pre,
 .bellum-partners-head .pre,
 .boosting-business-right-area .pre {
   min-height: 38px;
@@ -321,6 +323,7 @@ ul {
 .bellum-hero-eyebrow span,
 .bellum-about-eyebrow span,
 .bellum-services-eyebrow span,
+.bellum-projects-head .pre::before,
 .bellum-partners-head .pre::before,
 .boosting-business-right-area .pre::before {
   content: "";
@@ -558,6 +561,7 @@ ul {
 
 /* About */
 .bellum-about,
+.bellum-projects,
 .bellum-partners {
   position: relative;
   overflow: hidden;
@@ -595,6 +599,7 @@ ul {
 
 .bellum-about-title,
 .bellum-services-title,
+.bellum-projects-head .title,
 .bellum-partners-head .title,
 .boosting-business-right-area .title {
   margin: 22px 0 20px;
@@ -659,6 +664,7 @@ ul {
 }
 
 .bellum-services-head,
+.bellum-projects-head,
 .bellum-partners-head {
   max-width: 760px;
   margin: 0 auto 42px;
@@ -731,6 +737,300 @@ ul {
 .bellum-service-card p {
   font-size: 16px;
   line-height: 1.72;
+}
+
+/* Projects */
+.bellum-projects {
+  padding: 100px 0 72px;
+  background: linear-gradient(180deg, #f7f8fb 0%, #fff 100%);
+}
+
+.bellum-projects::after {
+  left: -18%;
+  top: 18%;
+  width: 52%;
+  height: 46%;
+  background: linear-gradient(90deg, rgba(10, 132, 255, 0.13), rgba(34, 177, 118, 0.12));
+}
+
+.project-gallery-shell {
+  position: relative;
+}
+
+.project-gallery-tabs {
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  gap: 8px;
+  margin: 0 auto 26px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.project-tab {
+  min-height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-tab.active {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(16, 22, 35, 0.18);
+}
+
+.project-carousel-wrap {
+  position: relative;
+}
+
+.project-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(310px, 31%);
+  gap: 18px;
+  overflow-x: auto;
+  padding: 8px 4px 24px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.project-track::-webkit-scrollbar {
+  display: none;
+}
+
+.project-track.is-static {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: visible;
+  padding-left: 0;
+  padding-right: 0;
+  scroll-snap-type: none;
+}
+
+.project-track.is-static .project-card {
+  width: min(100%, 360px);
+}
+
+.project-carousel-wrap.is-static .project-nav {
+  display: none;
+}
+
+.project-card {
+  scroll-snap-align: start;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.project-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: #e7ebf2;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-media span {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(16, 22, 35, 0.86);
+  color: #fff;
+}
+
+.project-card-media span i {
+  color: #fff;
+}
+
+.project-card-body {
+  min-height: 108px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px;
+}
+
+.project-card-body h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.22;
+  font-weight: 800;
+}
+
+.project-card-body p {
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.project-card-body small {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(34, 177, 118, 0.12);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.project-nav {
+  position: absolute;
+  top: 43%;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.project-nav.prev {
+  left: -22px;
+}
+
+.project-nav.next {
+  right: -22px;
+}
+
+.project-empty {
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(16, 22, 35, 0.18);
+  border-radius: var(--radius);
+  color: var(--soft);
+  font-weight: 700;
+  text-align: center;
+}
+
+body.project-gallery-open {
+  overflow: hidden;
+}
+
+body.project-gallery-open .progress-wrap {
+  display: none;
+}
+
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 82px;
+  background: rgba(9, 14, 24, 0.88);
+}
+
+.project-lightbox.open {
+  display: flex;
+}
+
+.project-lightbox-dialog {
+  width: min(100%, 1040px);
+  margin: 0;
+}
+
+.project-lightbox-dialog img {
+  width: 100%;
+  max-height: 78vh;
+  display: block;
+  border-radius: var(--radius);
+  object-fit: contain;
+  background: #101623;
+  box-shadow: var(--shadow-strong);
+}
+
+.project-lightbox-dialog figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 14px;
+  color: #fff;
+}
+
+.project-lightbox-dialog strong {
+  color: #fff;
+  font-size: 18px;
+}
+
+.project-lightbox-dialog span {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 800;
+}
+
+.project-lightbox-close,
+.project-lightbox-nav {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-lightbox-close i,
+.project-lightbox-nav i {
+  color: #fff;
+}
+
+.project-lightbox-close {
+  top: 24px;
+  right: 24px;
+}
+
+.project-lightbox-nav.prev {
+  left: 24px;
+}
+
+.project-lightbox-nav.next {
+  right: 24px;
 }
 
 /* Partners */
@@ -1361,6 +1661,7 @@ ul {
   .bellum-hero,
   .bellum-about,
   .bellum-services,
+  .bellum-projects,
   .bellum-partners,
   .bellum-facts,
   .bellum-business {
@@ -1379,6 +1680,7 @@ ul {
   .bellum-hero-title,
   .bellum-about-title,
   .bellum-services-title,
+  .bellum-projects-head .title,
   .bellum-partners-head .title,
   .boosting-business-right-area .title {
     font-size: 48px;
@@ -1394,6 +1696,18 @@ ul {
 
   .bellum-partners .partners-grid-wrapper {
     max-width: 620px;
+  }
+
+  .project-track {
+    grid-auto-columns: minmax(300px, 48%);
+  }
+
+  .project-nav.prev {
+    left: 8px;
+  }
+
+  .project-nav.next {
+    right: 8px;
   }
 
   .business-marklting-area-thumb,
@@ -1424,6 +1738,7 @@ ul {
 
 @media only screen and (max-width: 767px) {
   .bellum-services,
+  .bellum-projects,
   .bellum-partners,
   .bellum-facts,
   .bellum-business {
@@ -1465,6 +1780,7 @@ ul {
   .bellum-hero-title,
   .bellum-about-title,
   .bellum-services-title,
+  .bellum-projects-head .title,
   .bellum-partners-head .title,
   .boosting-business-right-area .title {
     font-size: 38px;
@@ -1549,6 +1865,64 @@ ul {
     min-height: 0;
   }
 
+  .project-gallery-tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-tab {
+    min-height: 46px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .project-track {
+    grid-auto-columns: minmax(260px, 86%);
+    gap: 14px;
+    padding-right: 18px;
+  }
+
+  .project-card-media {
+    aspect-ratio: 3 / 4;
+  }
+
+  .project-nav {
+    display: none;
+  }
+
+  .project-card-body {
+    min-height: 104px;
+    padding: 16px;
+    text-align: left;
+  }
+
+  .project-card-body h3 {
+    font-size: 18px;
+  }
+
+  .project-lightbox {
+    padding: 70px 14px 28px;
+  }
+
+  .project-lightbox-dialog img {
+    max-height: 66vh;
+  }
+
+  .project-lightbox-nav {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  .project-lightbox-nav.prev {
+    left: 18px;
+  }
+
+  .project-lightbox-nav.next {
+    right: 18px;
+  }
+
   .bellum-facts .signle-fun-facts-one {
     min-height: 220px;
   }
@@ -1589,6 +1963,7 @@ ul {
 @media only screen and (max-width: 420px) {
   .bellum-hero-title,
   .bellum-services-title,
+  .bellum-projects-head .title,
   .bellum-partners-head .title,
   .boosting-business-right-area .title {
     font-size: 24px;
@@ -1604,6 +1979,7 @@ ul {
   .bellum-hero-eyebrow,
   .bellum-about-eyebrow,
   .bellum-services-eyebrow,
+  .bellum-projects-head .pre,
   .bellum-partners-head .pre,
   .boosting-business-right-area .pre {
     font-size: 12px;
